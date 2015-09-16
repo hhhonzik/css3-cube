@@ -3,7 +3,7 @@
 Recreate of http://codepen.io/thebabydino/pen/jPeqmL as a practice.
 
 
-<!-- ## [Live demo]() -->
+## [Live demo](http://hhhonzik.github.io/css3-cube/)
 
 
 ## Installation
