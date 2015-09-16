@@ -1,0 +1,20 @@
+
+/*
+ *	Base styles
+ */
+@import 'layout/reset';
+@import 'layout/base';
+
+body{
+	font-family: Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/*
+ *  Components
+ */
+@import 'components/cube';
+@import 'components/row';
+@import 'components/pane';
+

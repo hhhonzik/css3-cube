@@ -1,0 +1,52 @@
+.cube{
+    
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+    perspective: 500px;
+    &, *{
+        transform-style: preserve-3d;
+    }
+}
+
+
+@mixin colorize ($color) {
+    &, &:after, &:before {
+        background: $color
+    }
+}
+
+
+
+.cube {
+    @for $i from 1 through 3 {
+        .row:nth-child(#{$i}) {
+            $r: random(255);
+            $g: random(255);
+            $b: random(255);
+            $color: rgb($r, $g, $b);
+
+            @for $y from 1 through 3 {
+                .pane:nth-child(#{$y}){
+                    @include colorize($color);
+                    $color: darken($color, 10);
+                    animation: pane 2s infinite -#{$y}s;
+                }    
+            }
+            
+        }    
+    }
+    
+}
+
+
+@keyframes pane{
+    0%, 100%{
+        transform: translateY(-30px);
+    }
+
+    50%{
+        transform: translateY(30px);
+    }
+
+}
